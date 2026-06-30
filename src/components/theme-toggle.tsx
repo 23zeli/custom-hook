@@ -1,9 +1,17 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import ResetButton from "./reset-button";
 import capitalize from "../lib/utils";
 
 export default function ThemeToggle() {
-    const [theme, setTheme] = useState('light')
+    const [theme, setTheme] = useState(() =>{
+            //get Data from local storage
+            return JSON.parse(localStorage.getItem('theme'));
+        });
+
+        useEffect(() => {
+            //set Data in local storage
+            localStorage.setItem('theme', JSON.stringify(theme));
+        }, [theme]);
 
     return (
         <section>
