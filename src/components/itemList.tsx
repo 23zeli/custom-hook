@@ -3,7 +3,7 @@ import capitalize from "../lib/utils";
 import useLocalStorage from "../lib/hooks";
 
 export default function ItemList () {
-    const [items, setItems] = useLocalStorage('items')
+    const [items, setItems] = useLocalStorage('items', [])
 
     return (
         <section>

@@ -3,7 +3,7 @@ import capitalize from "../lib/utils";
 import useLocalStorage from "../lib/hooks";
 
 export default function ThemeToggle() {
-    const [theme, setTheme] = useLocalStorage('theme')
+    const [theme, setTheme] = useLocalStorage('theme', 'light')
 
     return (
         <section>
