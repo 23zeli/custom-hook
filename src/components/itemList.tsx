@@ -7,11 +7,9 @@ export default function ItemList () {
     return (
         <section>
             <ul>
-                {
-                    items.map((item) => (
-                        <li key={item}>{item}</li>
-                    ))
-                }
+                {items.map((item) => (
+                    <li key={item}>{item.charAt(0).toUpperCase() + item.slice(1)}</li>
+                ))}
             </ul>
 
             <ResetButton />
