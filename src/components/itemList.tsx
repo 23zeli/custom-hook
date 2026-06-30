@@ -1,3 +1,5 @@
+import ResetButton from "./reset-button";
+
 export default function ItemList () {
     return (
         <section>
@@ -6,6 +8,8 @@ export default function ItemList () {
                 <li>Phone Charger</li>
                 <li>Passport</li>
             </ul>
+
+            <ResetButton />
         </section>
     )
 }
