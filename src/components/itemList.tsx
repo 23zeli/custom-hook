@@ -1,10 +1,9 @@
-import { useEffect, useState } from "react";
 import ResetButton from "./reset-button";
 import capitalize from "../lib/utils";
 import useLocalStorage from "../lib/hooks";
 
 export default function ItemList () {
-    useLocalStorage('items')
+    const [item, setItem] = useLocalStorage('items')
 
     return (
         <section>
