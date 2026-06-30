@@ -1,4 +1,4 @@
-import  ItemList from './components/ItemList'
+import ItemList from './components/itemList'
 import ThemeToggle from './components/theme-toggle'
 
 const App = () => {
@@ -6,10 +6,6 @@ const App = () => {
     <div>
       <ItemList />
       <ThemeToggle />
-
-      <button className="bg-black text-white py-3 px-5">
-        Reset
-      </button>
     </div>
   )
 }
