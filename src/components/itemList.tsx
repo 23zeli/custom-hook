@@ -3,12 +3,16 @@ import ResetButton from "./reset-button";
 import capitalize from "../lib/utils";
 
 export default function ItemList () {
-    const [items, setItems] = useState([]);
+
+    const [items, setItems] = useState(() =>{
+        //get Data from local storage
+        return JSON.parse(localStorage.getItem('Items'));
+    });
 
     useEffect(() => {
         //set Data in local storage
         localStorage.setItem('items', JSON.stringify(items));
-    }, [items])
+    }, [items]);
 
     return (
         <section>
