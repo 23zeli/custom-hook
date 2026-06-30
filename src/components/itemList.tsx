@@ -1,5 +1,6 @@
 import { useState } from "react";
 import ResetButton from "./reset-button";
+import capitalize from "../lib/utils";
 
 export default function ItemList () {
     const [items, setItems] = useState([]);
@@ -8,7 +9,7 @@ export default function ItemList () {
         <section>
             <ul>
                 {items.map((item) => (
-                    <li key={item}>{item.charAt(0).toUpperCase() + item.slice(1)}</li>
+                    <li key={item}>{capitalize(item)}</li>
                 ))}
             </ul>
 
